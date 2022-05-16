@@ -1,5 +1,0 @@
-tasks:
-    command: npx serve
-ports:
-  - port: 3000
-    onOpen: open-preview
