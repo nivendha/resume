@@ -1,3 +1,51 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --primary: #6153CB;
+    --avatar-size:380px;
+    --avatar-arc-radius:600px;
+  }
+
+.circle{
+ width: 200vh;
+ height: 200vh;
+ background-color: var(--primary);
+ position: absolute;
+ border-radius: 50%;
+ left: 50%;
+ top: -50%;
+}
+body{
+  overflow-y: hidden;
+}
+.avatar{
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+  background-color: aqua;
+  position: absolute;
+  top:calc(50% - var(--avatar-size)/2);
+  left: calc(50% - var(--avatar-size)/2)
+}
+
+.avatar-arc{
+  width: var(--avatar-arc-radius);
+  height: var(--avatar-arc-radius);
+  border-radius: 50%;
+  border: 6px solid #D9D9D9;
+  position: absolute;
+  top:calc(50% - var(--avatar-arc-radius)/2);
+  left: calc(50% - var(--avatar-arc-radius)/2);
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.triangle{
+  position: absolute;
+  bottom: 0;
+  border-bottom:40vh solid #D9D9D9;
+  border-right: 100vw solid transparent;
+}
