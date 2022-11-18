@@ -9,13 +9,15 @@
   }
 
 .circle{
- width: 200vh;
- height: 200vh;
- background-color: var(--primary);
- position: absolute;
- border-radius: 50%;
- left: 50%;
- top: -50%;
+  width: 50vw;
+  height: 150vh;
+  background-color: var(--primary);
+  position: absolute;
+  border-radius: 0;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  left: 50%;
+  top: -24vh;
 }
 body{
   overflow-y: hidden;
