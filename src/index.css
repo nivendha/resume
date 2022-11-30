@@ -7,37 +7,41 @@
 }
 
 .circle {
-    width: 50vw;
+    /* change to 50vw on animation */
+    width: 0; 
     height: 150vh;
     background-color: var(--primary);
     position: absolute;
     border-radius: 0;
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
-    left: 50%;
+    right: 0;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
     top: -24vh;
 }
-.circle-backward{
-  transform: rotate(180deg);
-  left: 0;
+.circle-backward {
+    display: none;
+    transform: rotate(180deg);
+    left: 0;
 }
 body {
     overflow-y: hidden;
     font-family: 'Inter', sans-serif;
+    background-color: #f2f2f2;
 }
-.main{
-  display: flex;
+.main {
+    display: flex;
 }
-.left-content{
-  width: 100vw;
-  height: 100vh;
+.left-content {
+    width: 100vw;
+    height: 100vh;
 }
 .right-content {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  left: 60%;
-  z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 60%;
+    z-index: -1;
 }
 .navbar {
     position: sticky;
@@ -56,6 +60,7 @@ body {
 
 }
 .avatar {
+    transform:scale(0);
     width: var(--avatar-size);
     height: var(--avatar-size);
     border-radius: 50%;
@@ -79,6 +84,7 @@ body {
 }
 
 .avatar-arc {
+    transform:scale(0);
     width: var(--avatar-arc-radius);
     height: var(--avatar-arc-radius);
     border-radius: 50%;
@@ -91,6 +97,7 @@ body {
     border-bottom-color: transparent;
 }
 .arc-content {
+    opacity: 0;
     position: absolute;
     width: 300px;
     top: calc(50% - var(--avatar-arc-radius) / 4);
@@ -99,13 +106,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+
 }
 .arc-content h2 {
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
     color: #FFFFFF;
+    cursor: pointer;
     transition: all 0.25s ease;
 }
 .arc-content h2:hover {
@@ -136,5 +144,5 @@ body {
     bottom: 0;
     z-index: -1;
     border-bottom: 40vh solid #D9D9D9;
-    border-right: 100vw solid transparent;
+    border-right: 0 solid transparent;
 }
